@@ -1,0 +1,112 @@
+:root {
+    --font: 'Ubuntu', sans-serif;
+    /* font-family: 'Rubik', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+}
+
+.outer {
+    margin-top: 30px;
+    overflow-x: scroll;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.outer::-webkit-scrollbar {
+    display: none;
+}
+
+.Card_outer {
+    height: 80px;
+    background-color: black;
+    width: fit-content;
+    padding: 10px 5px;
+    border-radius: 20px;
+    border: 0.5px solid black;
+}
+
+.cards_Div {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 10px;
+    border-radius: 36px;
+    background-color: black;
+    margin: 0 0;
+    box-shadow: 0px 0px 7px  0px rgba(255, 255, 255, 0.341);
+
+}
+
+.LogoStock {
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.StockDetail {
+    margin: 0 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.SymbolStock {
+    text-align: start;
+    font-weight: 700;
+    margin: 0 0;
+    color: white;
+}
+
+.ValueStock {
+    text-align: start;
+    margin: 0 0;
+    font-weight: 500;
+    color: white;
+}
+
+.ValueStock::before {
+    content: "+";
+}
+
+.ChartOuter{
+    width: 100%;
+    height: 330px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.tradingview-widget-container{
+    width: 100%;
+    height: 100%;
+}
+
+.active{
+    border: 1px solid white;
+
+}
+
+@media screen and (max-width:768px) {
+   .Card_outer{
+    width: fit-content;
+   }
+
+}
+
+.tradingview_ad97e{
+    width: 100%;
+    height: 100%;
+}
+
+.tradingview_ad97e:first-child,.tradingview_ad97e:nth-child(2){
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+:root {
+    --font: 'Ubuntu', sans-serif;
+    /* font-family: 'Rubik', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+}
+
+*{
+    font-family: var(--font);
+}
+
+.Footer{
+    margin-top: 100px;
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+}
+
+
+.footerOuter {
+    overflow: hidden;
+    padding: 20px 40px;
+    width: calc(100% - 80px);
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.LogoFooter {
+    height: 100px;
+    background-color: black;
+    width: 100px;
+}
+
+.LogoFooter>p {
+    width: 100%;
+    color: white;
+}
+
+.linksFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.linksFooter>div{
+    display: flex;
+    gap: 20px;
+}
+
+.linksFooter>div>div>p {
+    font-size: smaller;
+}
+
+.linksFooter>div>div>p>a {
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.485);
+}
+
+.LogoFooter>img {
+    width: 100%;
+}
+
+.LinksH4 {
+    color: white;
+}
+
+.ContactFormDiv {
+    border: 0.5px solid rgba(255, 255, 255, 0.178);
+    box-shadow: rgba(255, 255, 255, 0.102) 0px 2px 12px;
+    padding: 30px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: fit-content;
+    background-color: transparent;
+    min-width: 300px;
+}
+
+.FooterUl {
+    width: fit-content;
+}
+
+.Mobile {
+    display: none;
+}
+
+.Laptop {
+    display: block;
+}
+
+.ContactForm {
+    height: 70%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.ContactForm>h3{
+    color: white;
+}
+
+.ContactInputDiv {
+    height: 50px;
+    width: 100%;
+}
+
+.ContactInputDiv>input {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    height: 100%;
+    caret-color: white;
+    color: white;
+    width: 100%;
+    margin: 0 0;
+    font-size: medium;
+    font-weight: 550;
+    padding: 5px 5px;
+    background-color: rgba(255, 255, 255, 0.189);
+}
+
+.subscribeBtn{
+    cursor: pointer;
+    background: linear-gradient(75deg, #00bce6, #2962ff 50.31%, #d500f9) #aa00ff40;
+
+}
+
+.FooterLower{
+    box-sizing: border-box;
+    display: flex;
+    height: 100px;
+    margin: 0 0;
+    background-color: black;
+    width: 100%;
+    padding: 0 40px;
+    justify-content: space-between  ;
+    align-items: center;
+}
+
+.Mobile.FooterLower{
+    display: flex;
+}
+
+.LogoFooterLower{
+    width: 200px;
+    height: 100%;
+}
+
+.LogoFooterLower>img{
+    height: 100%;
+}
+
+.SocialUl{
+    padding: 0 15px;
+    list-style: none;
+    display: flex;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+.SocialMDiv{
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width:768px) {
+    .linksFooter{
+        flex-wrap: wrap;
+    }
+
+    .linksFooter>div{
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .ContactFormDiv{
+        border: none;
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    .footerOuter {
+        flex-wrap: wrap;
+    }
+
+    .Mobile {
+        display: block;
+    }
+
+    .Laptop {
+        display: none;
+    }
+}

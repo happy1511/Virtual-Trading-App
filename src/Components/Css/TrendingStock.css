@@ -1,0 +1,174 @@
+.Gainers{
+    width: 80%;
+    min-width: 320px;
+    margin-top: 20px;
+
+}
+
+.Loosers{
+    width: 80%;
+    min-width: 320px;
+    margin-top: 10px;
+}
+
+.Gul{
+    margin: 0 0;
+    padding: 10px 10px;
+    width: calc(100% - 2px);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    border: 0.1px solid rgba(255, 255, 255, 0.422);
+}
+
+.Gul>li{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: calc(100% - 40px);
+    margin-bottom: 1px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: default ;
+}
+
+.Gul>li:hover{
+    background-color: rgb(255 255 255 / 7%) ;
+}
+
+.logoS{
+    box-sizing: border-box;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 60px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px;
+}
+
+.logoS>img{
+    width: 100%;
+}
+
+.NameS{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 20px;
+    min-width: fit-content;
+}
+
+.PriceS{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.CurrentPrice{
+    font-size: larger;
+    font-weight: 700;
+
+}
+
+.CurrentPrice::after{
+    content: " INR";
+    font-size: xx-small;
+    opacity: .7;
+}
+
+.GainPrice{
+    background-color: rgb(0 113 0);
+    padding: 0 10px;
+    border-radius: 3px;
+}
+
+.Looseprice{
+    background-color: #a11313;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+
+.ButtonTrendingMarketLink{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ButtonTrendingMarket{
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px 20px;
+    margin-top: 30px;
+    font-size: large;
+    font-weight: 550;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    background:linear-gradient(75deg, #00bce6, #2962ff 50.31%, #d500f9) #aa00ff40;;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .Gainers{
+        width: 100%;
+        margin-top: 20px;
+    
+    }
+
+    .Loosers{
+        width: 100%;
+        margin-top: 20px;
+
+    }
+
+    .CurrentPrice{
+        font-size: medium;
+        font-weight: 700;
+        display: none;
+    }
+
+    .equitychange{
+        display: none;
+    }
+
+    .NameS{
+        font-size: small;
+    }
+
+    .Gul>li{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: calc(100% - 22px);
+        margin-bottom: 1px;
+        padding: 10px 10px;
+        border-radius: 36px;
+    
+    }
+
+    .GainPrice{
+        background-color: rgb(0 113 0);
+        padding: 0 10px;
+        border-radius: 3px;
+        font-size: smaller;
+    }
+    
+    .Looseprice{
+        background-color: #a11313;
+        padding: 0 10px;
+        border-radius: 3px;
+        font-size: smaller;
+    }
+}

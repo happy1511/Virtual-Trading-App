@@ -1,0 +1,30 @@
+.Section3{
+    height: calc(100% - 60px);
+    width: calc(100% - 40px);
+    background-color: black;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.Section3H3{
+    color: white;
+    margin: 0 0;
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+}
+
+.Section3H3>svg{
+    height: 100%;
+    width: 35px;
+}
+
+
+@media screen and (max-width:768px){
+    .Section3H3{
+        font-size: larger;
+    }
+    
+}

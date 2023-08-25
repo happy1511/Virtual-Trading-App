@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200&display=swap');
+
+*{
+    font-family: 'Albert Sans', sans-serif;
+}
+
+.NewsPageOuterDiv{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    padding: 40px 40px;
+}
+
+.NewsCardPageOuter{
+    box-sizing: border-box;
+    height: max(100px ,  fit-content);
+    width: 100%;
+    margin-top: 40px;
+    border-radius:10px;
+    padding: 10px 20px;
+    display: flex;
+}
+
+.DataNews{
+    background-color: black;
+    width: 85%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.DataNews>h4{
+    margin: 0 0;
+}
+
+.DataNews>p{
+    margin: 0 0;
+}
+
+.ImageNews{
+    background-color: blue;
+    width: 15%;
+}
+
+.ImageNews>img{
+    width: 100%;
+    height: 100%;
+}
+
+.NewsdataLink{
+    min-width: fit-content;
+    text-decoration: none;
+}
+
+.NewsCardPageOuter:hover{
+    box-sizing: border-box;
+    outline: 1px solid white;
+}
+
+@media screen and (max-width:768px) {
+    .NewsPageOuterDiv{
+        padding: 40px 0;
+    }
+
+    .DataNews{
+        width: 100%;
+    }
+
+    .ImageNews{
+        display: none;
+    }
+}

@@ -1,0 +1,121 @@
+.ProfileDivPage{
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: black;
+    padding: 80px 20px;
+}
+.OuterProfileDiv{
+    box-sizing: border-box;
+    padding: 20px 0px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+}
+
+.ProfilePhotoProfilePage{
+    border: 1px solid black;
+    background-color: aquamarine;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.ProfileLeftMenu{
+    box-sizing: border-box;
+    border-right:1px solid rgba(255, 255, 255, 0.137) ;
+    width: 30%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ProfileRightMenu{
+
+    width: 70%;
+    background-color: black;
+}
+
+.ProfilePhotoProfilePage>img{
+    height: 100%;
+    width: 100%;
+}
+
+.ProfileDetailProfilePage{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    padding: 25px 25px;
+}
+
+.ChangeProfilePictureButton{
+    box-sizing: border-box;
+    margin-top: 9px;
+    width: calc(100% - 3px);
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.301);
+    font-size: small;
+}
+
+.ChangeProfilePictureButton:hover{
+    cursor: pointer ;
+    background-color: #ffffff16;
+}
+
+.ProfileDetailProfilePageP{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: x-large;
+    margin: 0 0;
+}
+
+.ProfileDetailProfilePageP>pre{
+    color: white;
+    margin: 0 0;
+}
+
+.ProfilePictureMenuRight{
+    box-sizing: border-box;
+    padding: 10px 120px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.ProfileRightMenu>p{
+    margin: 0 0;
+    text-align: center;
+}
+.ProfilePictureMenuRight>div{
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.ProfilePictureMenuRight>div>img{
+    height: 100%;
+    width: 100%;
+}
+.ProfilePictureMenuRight>div:hover{
+    outline: 1px solid white;
+}
+
+.HistoryMenuRight{
+    box-sizing: border-box;
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    align-items: center;
+}

@@ -1,0 +1,61 @@
+
+:root {
+    --font: 'Ubuntu', sans-serif;
+    /* font-family: 'Rubik', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+}
+
+.Section2{
+    height: fit-content;
+    background-image: linear-gradient(0deg,#2a013f,#2a012f 20%,black);
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.HeadersS2{
+    width: calc(100% - 100px);
+    padding-top: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Section2H2{
+    margin: 0 0;
+    font-size: 7vw;
+    font-family: var(--font);
+    color: white;
+}
+
+.Section2P{
+    font-size: 3vw;
+    font-family: var(--font);
+    color: white;
+}
+
+.VideoS2Div{
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    height: 100%;
+    max-height: 1000px;
+}
+
+
+
+.YellowLine{
+    width: fit-content;
+    height: 100%;
+}
+
+.Video{
+    width: 80%;
+    display: inline-block;
+    border: 2px solid rgb(30, 181, 246);
+}

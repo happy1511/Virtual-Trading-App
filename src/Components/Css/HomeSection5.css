@@ -1,0 +1,36 @@
+.Section5{
+    height: max(calc(100vh - 60px) , fit-content);
+    width: calc(100% - 40px);
+    background-color: black;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.Section5H3{
+    color: white;
+    margin: 0 0;
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+}
+
+
+.Section5H3>svg{
+    height: 30px;
+    width: 35px;
+}
+
+.TrendingOuter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px){
+    .Section5H3{
+        font-size: larger;
+    }
+}

@@ -1,0 +1,200 @@
+.LoginPage {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.VideoLogin {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.VideoLogin>video {
+    width: 90%;
+    border-radius: 20px;
+    height: 90%;
+    object-fit: cover;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.LoginFormDiv {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.upperLoginDiv {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.CloseButtonLogin {
+    box-sizing: border-box;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.CloseButtonLogin>a {
+    color: black;
+    height: 100%;
+    width: 30px;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.LogoForm {
+    cursor: default;
+    width: 50%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.LogoForm>img {
+    height: 100%;
+}
+
+.LogoForm>h3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.LoginForm {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ActualForm {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+
+.FormH2 {
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.InputMobileNumber {
+    height: fit-content;
+    width: 70%;
+}
+
+.InputMobileNumber>label{
+    margin: 0 10px;
+    color: rgba(245, 245, 245, 0.772);
+}
+
+.mobiletag{
+    margin-top: 5px;
+    display: flex;
+    border: 0.5px solid rgba(255, 255, 255, 0.179);
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.mobiletag>div{
+    margin-left: 10px;
+    height: 100%;
+    font-size: medium;
+}
+
+.InputtagMobile {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 15px 10px;
+    background-color: rgba(0, 0, 0, 0.429);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: medium;
+    border-radius: 10px;
+
+}
+
+.submitBtnForm{
+    cursor: pointer;
+}
+
+.submitBtnForm:hover{
+    background-color: rgba(225, 222, 222, 0.098);
+}
+
+.Linkspan{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.mobiletag.pinDiv{
+    display: flex;
+    align-items: center;
+}
+
+.mobiletag.pinDiv>div{
+    cursor: pointer;
+    height: 100%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.mobiletag.pinDiv>div>svg{
+    width: 35px;
+}
+
+.InputtagMobile.PinInput{
+    width: 100%;
+}
+
+.profilediv{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile{
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+}
+
+.profileimg{
+    width: 100%;
+    height: 100%;
+}
+
+.profile:hover{
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.profile:active{
+    border: 1px solid white;
+}
