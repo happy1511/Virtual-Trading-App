@@ -1,0 +1,79 @@
+.ActivePositionsJSXOuter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ActivePositionsJSXHeader{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+
+}
+
+.ActivePositionsJSXHeaderButton{
+    padding: 10px 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.ActivePositionsJSXHeaderButton:hover{
+    background-color: rgba(255, 255, 255, 0.111);
+    cursor: pointer;
+}
+
+.ActivePositionsJSXMoneyBanner{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    justify-content:flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+.PositionsPL{
+    width: 30%;
+    box-sizing: border-box;
+    padding-right: 50px;
+    border-right: 1px solid rgba(255, 255, 255, 0.076);
+}
+
+.PositionsPLH3{
+    margin: 0 0;
+}
+
+.PositionsPLHP{
+    margin: 2px 0;
+
+}
+
+.PositionsInvested{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.OpenOrdersDiv{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+
+}
+
+.splide__slide{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+

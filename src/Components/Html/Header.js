@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import '../Css/Header.css'
 import LogoWhite from './Logo-white.png'
-import { useLoggedInUser, userdetail, userprofile } from '../../User/UserAthentication';
+import { useLoggedInUser } from '../../User/UserAthentication';
 import { auth } from '../../utilitise/Firebase';
 // import Logoblack from './Logo-black.png'
 // import About from './Pages/About';
@@ -51,6 +51,18 @@ const Header = () => {
     const hh = () => {
         console.log(user)
     }
+    //
+    //
+    //
+    //
+    //
+    
+    //
+    //
+    //
+    //
+    //
+    //
     return (
         <>
             {/* // <Router> */}
@@ -76,7 +88,7 @@ const Header = () => {
 
                     <div className="NavbarMenuDiv" id='Menu'>
                         <ul className="NavbarMenuUl">
-
+                           
                             <li className='NavbarMenuLi'>
                                 <Link className='NavbarMenuLinks' to='/About'>About</Link>
                             </li>

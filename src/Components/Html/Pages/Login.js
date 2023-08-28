@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../../Css/Login.css'
 import LoginVideo from './LoginVideo.mp4'
 import Logog from '../Logo-white.png'
-import { auth } from '../../../utilitise/Firebase'
+import { auth, db } from '../../../utilitise/Firebase'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useNavigate } from 'react-router-dom'
 import { useLoggedInUser } from '../../../User/UserAthentication'
@@ -14,6 +14,7 @@ import p5 from '../../../User/UserProfiles/profile5.png'
 import p6 from '../../../User/UserProfiles/profile6.png'
 import p7 from '../../../User/UserProfiles/profile7.png'
 import p8 from '../../../User/UserProfiles/profile8.png'
+import { ref, set } from 'firebase/database'
 
 const Login = () => {
   const [Mnumber, setMnumber] = useState("happy@gmail.com")
@@ -23,7 +24,7 @@ const Login = () => {
   const [Uname, setUname] = useState("")
   const [errorUser, setErrorUser] = useState("")
   const navigate = useNavigate()
-  const {  loginUser } = useLoggedInUser("")
+  const { loginUser } = useLoggedInUser("")
   const [chooseuserprofile, setchooseuserprofile] = useState(0)
   const handlePinChange = (e) => {
     setPin(e.target.value)
@@ -51,6 +52,15 @@ const Login = () => {
       displayName: Uname,
       photoURL: e.target.src
     })
+    set(ref(db, 'users' + auth.currentUser.uid), {
+      email: auth.currentUser.email,
+      portfolio: {
+        availableMoney: 1000000,
+        
+        profitorlose: 0,
+      },
+      orders: [ {openorders: []}, {closedorders: []}, ],
+    })
     console.log(e.target.value)
     loginUser(auth.currentUser)
     navigate('/')
@@ -72,34 +82,34 @@ const Login = () => {
     console.log("Sdfd")
     e.preventDefault();
     if (signIn) {
-     signInWithEmailAndPassword(auth,Mnumber,Pin).then((userCredential)=>{
-      loginUser(userCredential.user)
-      navigate("/")
-    }).catch((error)=>{
-      const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode)
-        console.log(errorMessage)
-        setErrorUser(errorMessage)
-    })
-    }
-    else{
-      createUserWithEmailAndPassword(auth, Mnumber, Pin)
-      .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-        console.log(user)
-        setchooseuserprofile(1)
-        // ...
-      })
-      .catch((error) => {
+      signInWithEmailAndPassword(auth, Mnumber, Pin).then((userCredential) => {
+        loginUser(userCredential.user)
+        navigate("/")
+      }).catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorCode)
         console.log(errorMessage)
         setErrorUser(errorMessage)
-        // ..
-      });
+      })
+    }
+    else {
+      createUserWithEmailAndPassword(auth, Mnumber, Pin)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user)
+          setchooseuserprofile(1)
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode)
+          console.log(errorMessage)
+          setErrorUser(errorMessage)
+          // ..
+        });
     }
   }
   return (

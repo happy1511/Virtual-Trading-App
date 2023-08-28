@@ -8,7 +8,7 @@ const NewsCard_NewsPage = (props) => {
                 <a href={props.data.url} className='NewsdataLink' target='_blank'>
                     <div className='NewsCardPageOuter'>
                         <div className="DataNews">
-                            {props.data.content ? <h4>{props.data.content}</h4> : <h4>{props.data.description}</h4>}
+                            {props.data.title ? <h4>{props.data.title}<br/>{props.data.description}</h4> : <h4>{props.data.description}</h4>}
                             <p>Author : {props.data.author}</p>
                         </div>
                         <div className="ImageNews">

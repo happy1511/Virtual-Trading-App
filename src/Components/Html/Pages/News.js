@@ -23,7 +23,7 @@ const News = () => {
       }
     }
     fetchNews();
-  })
+  },[])
   return (
     <>
       <Header />

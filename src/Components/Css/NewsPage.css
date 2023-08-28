@@ -13,6 +13,8 @@
 }
 
 .NewsCardPageOuter{
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
     box-sizing: border-box;
     height: max(100px ,  fit-content);
     width: 100%;

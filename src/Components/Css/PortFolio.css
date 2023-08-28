@@ -1,0 +1,63 @@
+.PortfolioPageOuter{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.PortfolioPageInner{
+    padding: 80px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.PortFolioValueDiv{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    border: 1px solid rgba(255, 255, 255, 0.081);
+}   
+
+.NewTradeButtonDiv{
+    box-sizing: border-box;
+    width: 100%;
+    height:100%;
+    padding: 20px 20px;
+}
+
+.PortFolioChooseButtonDiv{
+    box-sizing: border-box;
+    padding: 20px 0px;
+    width: 30%;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.081);
+}
+
+.PortFolioChooseButtonDiv>h4{
+    padding-left: 20px;
+}
+
+.PortFolioChooseButton{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    flex-direction: column;
+}
+
+.PortFolioChooseButton>h3{
+    width: 100%;
+    text-align: start;
+    margin: 0 0;
+    padding-bottom: 6px;
+}
+
+.PortFolioChooseButtonActive{
+    background-color: rgba(255, 255, 255, 0.07);
+    color: whitesmoke;
+}
