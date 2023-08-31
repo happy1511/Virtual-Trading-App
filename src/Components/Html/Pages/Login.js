@@ -52,12 +52,14 @@ const Login = () => {
       displayName: Uname,
       photoURL: e.target.src
     })
-    set(ref(db, 'users' + auth.currentUser.uid), {
+    set(ref(db, 'users/' + auth.currentUser.uid), {
       email: auth.currentUser.email,
       portfolio: {
         availableMoney: 1000000,
-        
         profitorlose: 0,
+        pastTradedAmount: 0,
+        InvestedAmount : 0,
+        positionsPL : 0,
       },
       orders: [ {openorders: []}, {closedorders: []}, ],
     })
@@ -108,7 +110,6 @@ const Login = () => {
           console.log(errorCode)
           console.log(errorMessage)
           setErrorUser(errorMessage)
-          // ..
         });
     }
   }

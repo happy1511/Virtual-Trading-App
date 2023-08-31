@@ -64,7 +64,12 @@
 
 @media screen and (max-width:768px) {
     .NewsPageOuterDiv{
-        padding: 40px 0;
+        padding: 40px 20px;
+    }
+
+    .NewsCardPageOuter{
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .DataNews{
@@ -72,6 +77,7 @@
     }
 
     .ImageNews{
-        display: none;
+        margin-bottom: 10px;
+        width: 100%;
     }
 }

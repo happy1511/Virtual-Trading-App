@@ -61,3 +61,10 @@
     background-color: rgba(255, 255, 255, 0.07);
     color: whitesmoke;
 }
+
+
+@media screen and (max-width:1024px) {
+    .PortfolioPageInner{
+        padding: 80px 0px;
+    }
+}

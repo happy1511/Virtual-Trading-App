@@ -6,6 +6,8 @@ import AllIndicesCard from '../JS/AllIndicesCard'
 import axios from 'axios'
 import MostActiveTrendingPage from '../JS/MostActiveTrendingPage'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css/core';
+
 const Trending = () => {
   const [selectedindices, setselectedindices] = useState('nifty 50')
   const [Allindices, setAllindices] = useState([])
@@ -14,20 +16,26 @@ const Trending = () => {
   const [byValue, setbyValue] = useState([])
   const [gainers, setgainers] = useState([])
   const [Loosers, setLoosers] = useState([])
+  const h = window.innerWidth - 60
   const splideOptions = {
     // Or 'loop' depending on your use case
-    arrows: false, // Hide arrow navigation
+    arrows: false,
     pagination: false,
-    type: 'loop',
-    drag: 'free',
-    snap: true, // Hide pagination
-    // Other options here...
-  };
+    type: '',
+    wheel: true,
+    perPage: calculateCardsPerPage()
 
+  };
+  function calculateCardsPerPage(screenWidth = window.innerWidth) {
+    const cardWidth = 250; // Set your card width in pixels
+    const gap = 0; // Set any gap/margin between cards
+
+    // Calculate the number of cards that can fit on the screen
+    return Math.floor(screenWidth / (cardWidth + gap));
+  }
   const fetchindices = () => {
     const url = '/api/allIndices'
     axios.get(url).then((res) => {
-      console.log(res)
       setAllindices(res.data.data)
       setselectedindices(res.data.data[0].indexSymbol)
     }).catch((err) => {
@@ -36,9 +44,7 @@ const Trending = () => {
   }
   const fetchselected = () => {
     const url = '/api/mostActive/' + selectedindices.toLowerCase()
-    console.log(url)
     axios.get(url).then((res) => {
-      console.log(res)
       setbyVolume(res.data.byVolume)
       setbyValue(res.data.byValue)
     }).catch((err) => {
@@ -48,9 +54,7 @@ const Trending = () => {
 
   const fetchGL = () => {
     const surl = '/api/gainersAndLosers/' + selectedIndicesTopGL.toLowerCase()
-    console.log(surl)
     axios.get(surl).then((res) => {
-      console.log(res)
       setgainers(res.data.gainers)
       setLoosers(res.data.losers)
     }).catch((err) => {
@@ -67,6 +71,11 @@ const Trending = () => {
     fetchindices();
     fetchselected();
     fetchGL();
+
+    setInterval ( () => {
+      fetchselected();
+      fetchGL();
+    },1000)
   }, [])
 
   useEffect(() => {
@@ -81,7 +90,7 @@ const Trending = () => {
       <Header />
       <div className="OuterTrendingPage">
         <div className="SearchIconTrendingPage">
-          <svg viewBox="0 0 30 25" height='30px' width='30px' fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+          <svg viewBox="0 0 30 25" height='30px' width='30px' fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
           <input type="text" />
           <div className='inputTrendingButton'>Search</div>
         </div>
@@ -92,7 +101,6 @@ const Trending = () => {
             {Allindices.map((data, index) => (
               <SplideSlide key={index}>
                 {/* Log a message to check if the slide is being rendered */}
-                {console.log(`Rendering slide ${index}`)}
                 <AllIndicesCard data={data} />
               </SplideSlide>
             ))}

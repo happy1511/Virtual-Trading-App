@@ -21,9 +21,7 @@ export function useLoggedInUser() {
   const [user, setUser] = useState(null);
 
   const loginUser = userDetails => {
-    console.log(userDetails)
     setUser(userDetails);
-    console.log('lol',user)
   };
 
   const logoutUser = () => {

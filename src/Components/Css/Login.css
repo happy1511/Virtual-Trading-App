@@ -198,3 +198,26 @@
 .profile:active{
     border: 1px solid white;
 }
+
+@media screen and (max-width:1024px) {
+    .VideoLogin{
+        display: none;
+    }
+    .LoginFormDiv{
+        width: 100% ;
+    }
+}
+
+@media screen and (max-width:624px) {
+    .ActualForm{
+        min-width: 300px;
+    }
+
+    .InputMobileNumber{
+        width: 100%;
+    }
+
+    .LogoForm{
+        width: 100%;
+    }
+}

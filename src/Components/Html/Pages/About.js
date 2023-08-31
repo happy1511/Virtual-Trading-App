@@ -1,10 +1,19 @@
 import React from 'react'
+import { useActivePill } from '../JS/HomeHook'
+import Header from '../Header'
+import Footer from '../Footer'
 
 const About = () => {
+  const [activePill, setActivePill] = useActivePill('About')
   return (
-    <div>
-      <p>About</p>
-    </div>
+    <>
+
+      <Header />
+      <div>
+        <p>About</p>
+      </div>
+      <Footer/>
+    </>
   )
 }
 

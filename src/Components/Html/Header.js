@@ -12,8 +12,9 @@ import { auth } from '../../utilitise/Firebase';
 // import Trending from './Pages/Trending';
 // import Home from './Pages/Home';
 // import Login from './Pages/Login';
-
+import { ActivePill, setActivePill, useActivePill } from '../Html/JS/HomeHook'
 const Header = () => {
+    const [activePill, setActivePill] = useActivePill()
     const { user } = useLoggedInUser()
     var open = 0
     const toggleMenu = () => {
@@ -48,15 +49,13 @@ const Header = () => {
         };
     }, []);
 
-    const hh = () => {
-        console.log(user)
-    }
+   
     //
     //
     //
     //
     //
-    
+
     //
     //
     //
@@ -66,7 +65,7 @@ const Header = () => {
     return (
         <>
             {/* // <Router> */}
-            <div className="Page" onClick={hh}>
+            <div className="Page">
 
                 <div className='NavbarDiv1' id='navbar' style={{ backgroundColor: isHeaderBlack ? 'black' : 'transparent' }}>
                     <div className="NavbarToggleDiv">
@@ -88,25 +87,27 @@ const Header = () => {
 
                     <div className="NavbarMenuDiv" id='Menu'>
                         <ul className="NavbarMenuUl">
-                           
-                            <li className='NavbarMenuLi'>
+                            <li className={`NavbarMenuLi ${activePill === 'Home' ? 'ActivePill' : ''}`}>
+                                <Link className='NavbarMenuLinks' to='/'>Home</Link>
+                            </li>
+                            <li className={`NavbarMenuLi ${activePill === 'About' ? 'ActivePill' : ''}`}>
                                 <Link className='NavbarMenuLinks' to='/About'>About</Link>
                             </li>
-                            <li className='NavbarMenuLi'>
+                            <li className={`NavbarMenuLi ${activePill === 'News' ? 'ActivePill' : ''}`}>
                                 <Link className='NavbarMenuLinks' to='/News'>News</Link>
                             </li>
-                            <li className='NavbarMenuLi'>
+                            <li className={`NavbarMenuLi ${activePill === 'Trending' ? 'ActivePill' : ''}`}>
                                 <Link className='NavbarMenuLinks' to='/TrendingMarkets'>Trending Markets</Link>
                             </li>
-                            <li className='NavbarMenuLi'>
+                            <li className={`NavbarMenuLi ${activePill === 'PortFolio' ? 'ActivePill' : ''}`}>
                                 <Link className='NavbarMenuLinks' to='/Portfolio'>PortFolio</Link>
                             </li>
-                            <li className='NavbarMenuLi'>
-                                <Link className='NavbarMenuLinks' to='/Market'>Market</Link>
-                            </li>
-                            <li className='NavbarMenuLi Mobile'>
+                            {/* <li className={`NavbarMenuLi ${activePill === 'Home' ? 'ActivePill' : ''}`}>
+                                 <Link className='NavbarMenuLinks' to='/Market'>Market</Link> 
+                            </li> */}
+                            {/* <li className={`NavbarMenuLi ${activePill === 'Home' ? 'ActivePill' : ''}`}>
                                 <Link className='NavbarMenuLinks' to='/Market'>SignIn</Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
 
@@ -117,7 +118,7 @@ const Header = () => {
                                     {() => {
                                         console.log(auth.currentUser.photoURL)
                                     }}
-                                    <img src={auth.currentUser.photoURL} alt="" srcset="" height="30px" />
+                                    <img src={auth.currentUser.photoURL} alt="" srcSet="" height="30px" />
                                     <p className='usernameHeader'>{auth.currentUser.displayName}</p>
                                 </Link>
                             </> : <>

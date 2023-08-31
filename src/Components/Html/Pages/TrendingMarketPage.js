@@ -20,7 +20,6 @@ const TrendingMarketPage = () => {
             const url = 'http://localhost:3000/api/mostActive/nifty%2050'
             axios.get(url).then((res) => {
                 setAllIndicesStock({ ...AllIndicesStock, ["Nifty 50"]: res })
-                console.log(AllIndicesStock)
             }).catch((error) => {
                 console.log(error)
             })
@@ -29,7 +28,6 @@ const TrendingMarketPage = () => {
 
         return (clearInterval(interval))
     }, [])
-    console.log(AllIndicesStock)
     return (
         <>
             <div style={{ backgroundColor: "black" }}>

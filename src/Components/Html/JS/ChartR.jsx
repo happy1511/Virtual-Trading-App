@@ -49,6 +49,7 @@ const ChartR = (props) => {
                 ],
             },
             options: {
+                animation:false,
                 responsive: true,
                 maintainAspectRatio: false,
                 elements: {
@@ -58,16 +59,7 @@ const ChartR = (props) => {
                 },
                 plugins: {
                     annotation: {
-                        annotations: {
-                            line1: {
-                                type: 'line',
-                                yMin: 1568.15,
-                                yMax: 1568.15,
-                                borderColor: 'white',
-                                borderWidth: 2,
-                                z: 1,
-                            }
-                        },
+                        enabled: false ,
                     },
                     legend: {
                         display: false,
@@ -161,7 +153,10 @@ const ChartR = (props) => {
                 }
             }
         }
-        FetchDate();
+        FetchDate()
+        setInterval(() => {
+            FetchDate()
+        }, 5000);
         // Clean up function to destroy the chart instance when the component unmounts
 
     }, [props.historical]);

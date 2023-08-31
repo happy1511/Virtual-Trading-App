@@ -42,7 +42,7 @@ const StockDataWithChart = () => {
         fetchSymbolData();
         const interval = setInterval(() => {
             fetchSymbolData();
-        }, 100);
+        }, 5000);
 
         return () => {
             clearInterval(interval); // Clear the interval on component unmount
@@ -67,7 +67,7 @@ const StockDataWithChart = () => {
                             {(Number.parseFloat(Symboldata.priceInfo?.pChange).toFixed(1)).toString().charAt(0) === '-' ? '↓ ' + (Number.parseFloat(Symboldata.priceInfo?.pChange).toFixed(1)).toString() : '↑ ' + (Number.parseFloat(Symboldata.priceInfo?.pChange).toFixed(1)).toString()}
                         </div>
                         <div className='PriceChangeChartPage'>
-                            {(Number.parseFloat(Symboldata.priceInfo?.change).toFixed(1)).toString().charAt(0) === '-' ? '+ ' + (Number.parseFloat(Symboldata.priceInfo?.change).toFixed(1)).toString() : '- ' + (Number.parseFloat(Symboldata.priceInfo?.change).toFixed(1)).toString()}
+                            {(Number.parseFloat(Symboldata.priceInfo?.change).toFixed(1)).toString().charAt(0) === '-' ?  (Number.parseFloat(Symboldata.priceInfo?.change).toFixed(1)).toString() : '+ ' + (Number.parseFloat(Symboldata.priceInfo?.change).toFixed(1)).toString()}
                         </div>
                     </h2>
                 </div>

@@ -105,7 +105,7 @@ html {
     overflow: hidden;
 }
 
-.MostActiveTrendingPageDiv1:hover{
+.MostActiveTrendingPageDiv1:hover {
     background-color: rgba(255, 255, 255, 0.048);
 }
 
@@ -145,18 +145,18 @@ html {
     justify-content: space-around;
 }
 
-.SearchIconTrendingPage{
+.SearchIconTrendingPage {
     box-sizing: border-box;
     width: 100%;
     height: 50px;
     padding: 10px 10px;
-    background-color:  black;
+    background-color: black;
     outline: 1px solid white;
     border-radius: 10px;
     display: flex;
 }
 
-.SearchIconTrendingPage>input{
+.SearchIconTrendingPage>input {
     width: calc(100% - 90px);
     height: 100%;
     outline: none;
@@ -170,7 +170,7 @@ html {
     align-items: center;
 }
 
-.inputTrendingButton{
+.inputTrendingButton {
     box-sizing: border-box;
     width: 80px;
     height: 100%;
@@ -185,8 +185,8 @@ html {
     padding: 0 5px;
 }
 
-
-.splide__list{
+/* 
+.splide__list {
     display: flex;
     padding: 0 0;
     margin: 0 0;
@@ -194,6 +194,18 @@ html {
 }
 
 
-.splide__sr{
+.splide__sr {
     display: none;
+}
+
+.splide__slide {
+    min-width: fit-content !important;
+} */
+
+.splide{
+    width: 100% !important;
+}
+
+.splide__list{
+    gap: 15px !important;
 }

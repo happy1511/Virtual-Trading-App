@@ -3,7 +3,9 @@ import Header from '../Header'
 import '../../Css/NewsPage.css'
 import NewsCardNewsPage from '../JS/NewsCardNewsPage'
 import Footer from '../Footer'
+import { useActivePill } from '../JS/HomeHook'
 const News = () => {
+  const [activePill, setActivePill] = useActivePill('News')
   const [DataNews, setDataNews] = useState([])
 
   useEffect(() => {
@@ -14,9 +16,7 @@ const News = () => {
         const response = await fetch(url);
         const result = await response.json();
         // const newsStream = (JSON.parse(result)).data.main.stream;
-        console.log(result)
         setDataNews(result.articles)
-        console.log(DataNews)
       }
       catch (error) {
         console.error(error);

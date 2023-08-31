@@ -7,7 +7,6 @@ const TrendingMarkets = () => {
 
     const TrendingM = async () => {
         const url = '/api/gainersAndLosers/Nifty%2050'; // Use a relative URL
-        console.log("executed")
         try {
             const response = await axios.get(url);
             const data = response.data; // Assuming the API returns an object with gainers and losers arrays
@@ -76,7 +75,7 @@ const TrendingMarkets = () => {
                                 <div className="NameS">{data.symbol}</div>
                                 <div className="PriceS"><div className="equitychange"></div>
                                     <div className="CurrentPrice">{data.lastPrice}</div>
-                                    <div className="Looseprice">-{data.pChange}%</div></div>
+                                    <div className="Looseprice">{data.pChange}%</div></div>
                             </li>
                         ))
                     }

@@ -38,7 +38,6 @@ const NewsStocks = () => {
                 const response = await fetch(url);
                 const result = await response.json();
                 // const newsStream = (JSON.parse(result)).data.main.stream;
-                console.log(result)
                 setNewsData(result.articles)
             }
             catch (error) {
